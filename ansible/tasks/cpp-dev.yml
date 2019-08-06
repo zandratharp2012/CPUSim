@@ -1,0 +1,9 @@
+---
+- name: configure for C++ development
+  apt:
+    name={{ item }}
+    state=latest
+  with_items:
+    - build-essential
+    - git
+    - freeglut3-dev

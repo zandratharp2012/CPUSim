@@ -1,0 +1,9 @@
+---
+  - hosts: local-vm
+    connection: local
+    become: true
+
+    tasks:
+      - include_tasks: tasks/apt-update.yml
+      - include_tasks: tasks/cpp-dev.yml
+      - include_tasks: tasks/avr-dev.yml

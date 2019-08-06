@@ -1,0 +1,10 @@
+---
+- name: install AVR tools
+  apt:
+    name={{ item }}
+    state=latest
+  with_items:
+    - binutils-avr
+    - gcc-avr
+    - avr-libc
+    - avrdude
